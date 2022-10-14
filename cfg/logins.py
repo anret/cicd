@@ -19,20 +19,6 @@ devices = [
     },
 ]
 
-parameter = ["name", "ip", "sm", "descr", "status"]
-phys_interfaces = [
-    ["gi0/0", "10.0.0.1", "255.255.255.0", "Lan 1", "up"],
-    ["gi0/1", "10.0.1.1", "255.255.255.0", "DMZ", "down"],
-    ["gi0/2", "10.0.2.1", "255.255.255.0", "Intern", "up"],
-    ["gi0/3", "10.0.3.1", "255.255.255.0", "Cloud", "up"],
-]
-logical_interfaces = [
-    ["Tu0", "150.0.0.1", "255.255.255.0", "Tunnel Standort MUC", "up"],
-    ["Lo0", "10.10.1.1", "255.255.255.0", "Loopback", "up"],
-    ["Null0", "10.10.0.0", "255.255.255.0", "Cloud", "up"],
-]
-
-
 configurations = []
 for i in range(1, 4):
     with open(f"cfg/csr-{i}.cfg") as f:
